@@ -41,19 +41,28 @@ $datosY=json_encode($valoresY);
     x: datosX,
     y: datosY,
   mode: 'lines+markers',
-  name: 'North America',
-  text: ['United States'],
+  // line-and-scatter-plot  
+  line: {
+      color: 'red',
+      width: 2
+    },
   marker: {
     color: 'blue',
-    size: 12,
-    line: {
-      color: 'red',
-      width: 1
-    }
+    size: 9, 
   },
   type: 'scatter'
 }; 
+ // styling-line-plot
+var layout = {
+  title: 'Ventas',
+  xaxis: {
+    title: 'Fechas'
+  },
+  yaxis: {
+    title: '$ Costos'
+  }
+};
 
 var data = [trace1];
-Plotly.newPlot('graph_line', data);
+Plotly.newPlot('graph_line', data, layout);
 </script>
