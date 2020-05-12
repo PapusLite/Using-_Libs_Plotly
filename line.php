@@ -40,15 +40,15 @@ $datosY=json_encode($valoresY);
   var trace1 = {
     x: datosX,
     y: datosY,
-  mode: 'markers',
+  mode: 'lines+markers',
   name: 'North America',
   text: ['United States'],
   marker: {
-    color: 'rgb(164, 194, 244)',
+    color: 'blue',
     size: 12,
     line: {
-      color: 'white',
-      width: 0.5
+      color: 'red',
+      width: 1
     }
   },
   type: 'scatter'
