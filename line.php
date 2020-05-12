@@ -35,13 +35,24 @@ $datosY=json_encode($valoresY);
  </script>
 
 <script>
-  
 
-var trace1 = {
-  x: datosX,
-  y: datosY,
+ 
+  var trace1 = {
+    x: datosX,
+    y: datosY,
+  mode: 'markers',
+  name: 'North America',
+  text: ['United States'],
+  marker: {
+    color: 'rgb(164, 194, 244)',
+    size: 12,
+    line: {
+      color: 'white',
+      width: 0.5
+    }
+  },
   type: 'scatter'
-};
+}; 
 
 var data = [trace1];
 Plotly.newPlot('graph_line', data);
