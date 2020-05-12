@@ -2,7 +2,7 @@
 require_once "php/conexion.php";
 $conexion= conexion();
   
-$sql= "SELECT fechaVenta, montoVenta FROM ventas";
+$sql= "SELECT fechaVenta, montoVenta FROM ventas order by fechaVenta";
 $result= mysqli_query($conexion,$sql);
 $valoresX=array(); //Fechas
 $valoresY=array(); //Montos
@@ -29,12 +29,14 @@ $datosY=json_encode($valoresY);
     return arr;
   }
 </script>
-<script>
-  datosX= crearCadenaLineal('<?php echo $datosX ?>' );
-  datosY= crearCadenaLineal('<?php echo $datosY ?>' );
-</script>
+ <script>
+   datosX= crearCadenaLineal('<?php echo $datosX ?>' );
+   datosY= crearCadenaLineal('<?php echo $datosY ?>' );
+ </script>
 
 <script>
+  
+
 var trace1 = {
   x: datosX,
   y: datosY,
