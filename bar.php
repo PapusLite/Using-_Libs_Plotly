@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph BAR</title>
+</head>
+<body>
 <?php
 require_once "php/conexion.php";
 
@@ -42,6 +50,7 @@ $datosY=json_encode($valoresY);
     y: datosY,
     type: 'bar',
     name: 'Casos',
+    resize: true,
     marker: {
     color: 'red',
     line: {
@@ -70,3 +79,5 @@ var layout = {
 
 Plotly.newPlot('graph_bar', data, layout);
 </script>
+</body>
+</html>

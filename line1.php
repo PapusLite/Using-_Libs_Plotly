@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph LINE1</title>
+</head>
+<body>
 <?php
 require_once "php/conexion.php";
 $conexion= conexion();
@@ -40,23 +48,21 @@ $datosY1=json_encode($valoresY1);
   </script>
 
 <script>
-    // x: datosX,
-    // y: datosY0, 
-    // y: datosY1, 
-   
-
+  
 var trace2 = {
   x: datosX,
   y: datosY1,
   mode: 'lines',
-  name: 'Cuba'
+  name: 'Cuba',
+  
 };
 
 var trace3 = {
   x: datosX,
   y: datosY0,
   mode: 'lines+markers',
-  name: 'Habana'
+  name: 'Habana',
+  
 };
 
 var data = [trace2, trace3];
@@ -74,3 +80,5 @@ var layout = {
 Plotly.newPlot('graph_line1', data, layout);   
  
 </script>
+</body>
+</html>

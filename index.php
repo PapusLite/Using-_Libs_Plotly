@@ -17,28 +17,32 @@
                 </div>
                 <div class="panel panel-body">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <div id="loadline"></div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <div id="loadbar"></div>
                         </div>
                         <div class="col-sm-12">
                             <div id="loadline1"></div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div id="loadarea"></div>
                         </div>
                     </div>
                 </div>    
             </div>
         </div>
     </div>
-    
-</body>
-</html>
-<script>
+    <script>
         $(document).ready(function(){
         $('#loadline').load('line.php');
         $('#loadbar').load('bar.php');
         $('#loadline1').load('line1.php');
+        $('#loadarea').load('area.php');
     });
 </script>
+</body>
+</html>
+
    

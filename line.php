@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graph LINE</title>
+</head>
+<body>
 <?php
 require_once "php/conexion.php";
 $conexion= conexion();
@@ -41,6 +49,7 @@ $datosY=json_encode($valoresY);
     x: datosX,
     y: datosY,
   mode: 'lines+markers',
+  resize: true,
     // line-and-scatter-plot 
      
   line: {
@@ -69,3 +78,5 @@ var layout = {
 var data = [trace1];
 Plotly.newPlot('graph_line', data, layout);
 </script>
+</body>
+</html>
