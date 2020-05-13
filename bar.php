@@ -3,7 +3,7 @@ require_once "php/conexion.php";
 
 $conexion= conexion();
   
-$sql= "SELECT fechaVenta, montoVenta FROM ventas order by fechaVenta";
+$sql= "SELECT fecha, habana FROM habanacuba order by fecha";
 $result= mysqli_query($conexion,$sql);
 $valoresX=array(); //Fechas
 $valoresY=array(); //Montos
@@ -40,9 +40,33 @@ $datosY=json_encode($valoresY);
   {
     x: datosX,
     y: datosY,
-    type: 'bar'
-  }
+    type: 'bar',
+    name: 'Casos',
+    marker: {
+    color: 'red',
+    line: {
+      color: 'black',
+      width: 2
+    }
+  }    
+  }  
 ];
+var layout = {
+  title: 'Ventas Graph_Bar',
+  font:{
+    family: 'Raleway, sans-serif'
+  },
+  showlegend: false,
+  xaxis: {
+    tickangle: -45
+  },
+  yaxis: {
+    title: '$ Costos',
+    zeroline: false,
+    gridwidth: 2
+  },
+  bargap :0.1
+};
 
-Plotly.newPlot('graph_bar', data);
+Plotly.newPlot('graph_bar', data, layout);
 </script>

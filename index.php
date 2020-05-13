@@ -23,6 +23,9 @@
                         <div class="col-sm-6">
                             <div id="loadbar"></div>
                         </div>
+                        <div class="col-sm-12">
+                            <div id="loadline1"></div>
+                        </div>
                     </div>
                 </div>    
             </div>
@@ -35,6 +38,7 @@
         $(document).ready(function(){
         $('#loadline').load('line.php');
         $('#loadbar').load('bar.php');
+        $('#loadline1').load('line1.php');
     });
 </script>
    

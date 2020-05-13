@@ -2,7 +2,7 @@
 require_once "php/conexion.php";
 $conexion= conexion();
   
-$sql= "SELECT fechaVenta, montoVenta FROM ventas order by fechaVenta";
+$sql= "SELECT fecha, cuba FROM habanacuba order by fecha";
 $result= mysqli_query($conexion,$sql);
 $valoresX=array(); //Fechas
 $valoresY=array(); //Montos
@@ -41,7 +41,8 @@ $datosY=json_encode($valoresY);
     x: datosX,
     y: datosY,
   mode: 'lines+markers',
-  // line-and-scatter-plot  
+    // line-and-scatter-plot 
+     
   line: {
       color: 'red',
       width: 2
@@ -50,11 +51,13 @@ $datosY=json_encode($valoresY);
     color: 'blue',
     size: 9, 
   },
+  name: 'Casos',
   type: 'scatter'
 }; 
  // styling-line-plot
 var layout = {
-  title: 'Ventas',
+  
+  title: 'Ventas Graph_Line',
   xaxis: {
     title: 'Fechas'
   },
